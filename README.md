@@ -40,6 +40,19 @@ _.capitalize_ capitalizes the first letter in the sentence and changes rest to l
 ```ruby
 user_input.downcase!
 ```
+_.include? "substring"_ checks if the variable has the substring. It returns boolean.
+```ruby
+if input.include? "hello"
+    puts input
+end
+```
+*__Note__*: As a general rule, Ruby methods that end with ? evaluate to the boolean values true or false.
+
+_.gsub_ stands global substitution. It substitutes a substring with another. 
+```ruby
+user_input.gsub!(/s/,"th")
+```
+This replaces all 's' in the string to 'th'.
 
 ## Comments
 Single line comments are written with hash(#) in the start. Multi-line comments start with _=begin_ and end with _=end_ .
