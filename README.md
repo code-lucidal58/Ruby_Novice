@@ -114,3 +114,47 @@ print 'Good work!!' unless jobNotDone
 Complex expressions can be created using these operators: E.g. *(x && (y || w)) && z*
 Expressions in parentheses are always evaluated before anything outside parentheses.
 
+## Loops and Iterators
+Use of while:
+```ruby
+i=0
+while i<5
+    puts i
+    i=i+1
+end
+```
+Use of **until**: continues looping _until_ the condition given turns to be true. It is compliment to _while_.
+```ruby
+counter = 1
+until counter == 11
+    puts counter
+    counter+=1
+end
+```
+This prints from 1 to 10, each number in new line.
+**_Note_**: These operators are supported in Ruby: += -= *= /=
+
+When you don't know how many times you have to loop in, a different syntax of _for_ can be used. 
+```ruby
+for num in 1...10
+  puts num
+end
+```
+This will print numbers from 1 to 9 each in different line.
+1...10 will print 1 to 9
+1..10 will print 1 to 10
+
+Ruby supports iterators. One such simple method is **_loop_**.
+```ruby
+loop { print "Hello there!!" }
+```
+The curly braces {} are interchangeable with keywords _do_ and _end_.
+```ruby
+i = 0
+loop do
+  i += 1
+  print "#{i}"
+  break if i > 5
+end
+```
+You have to give a condition inside the block which will be used to decide when to break the loop.
