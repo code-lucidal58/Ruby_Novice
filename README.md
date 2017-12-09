@@ -54,6 +54,12 @@ user_input.gsub!(/s/,"th")
 ```
 This replaces all 's' in the string to 'th'.
 
+_.split_ method returns all words in a string as an array. If text is given as parameter, it will divide the string wherever it sees that bit of text. The test is called _delimiter_.
+```ruby
+words = text.split(" ")
+```
+_text_ is a string and _words_ is an array. Space is delimiter here.
+
 ## Comments
 Single line comments are written with hash(#) in the start. Multi-line comments start with _=begin_ and end with _=end_ .
 ```ruby
@@ -109,9 +115,9 @@ jobNotDone = false
 print 'Good work!!' unless jobNotDone
 ```
 
-**Relational, Assigment and Comparison Operators** are same as for other common languages: = == > >= < <= !=
-**Logical and Boolean operators**: && || !
-Complex expressions can be created using these operators: E.g. *(x && (y || w)) && z*
+**Relational, Assigment and Comparison Operators** are same as for other common languages: = == > >= < <= != </br>
+**Logical and Boolean operators**: && || !</br>
+Complex expressions can be created using these operators: E.g. *(x && (y || w)) && z*</br>
 Expressions in parentheses are always evaluated before anything outside parentheses.
 
 ## Loops and Iterators
@@ -157,4 +163,36 @@ loop do
   break if i > 5
 end
 ```
-You have to give a condition inside the block which will be used to decide when to break the loop.
+A condition is given inside the block which will be used to decide when to break the loop.
+The __next__ keyword can be used to skip over certain steps in the loop.
+```ruby
+i = 20
+loop do
+  i -= 1
+  next if i%2!=0
+  	puts "#{i}"
+  break if i <= 0
+end
+```
+This code snippet will print only even numbers from 18 to 0.
+
+Arrays in Ruby are declared as:
+```ruby
+my_array = [1,2,3,4,5]
+```
+__.each__ method is more powerful iterator.
+```ruby
+array = [1,2,3,4,5]
+array.each do |x|
+  x += 10
+  print "#{x}"
+end
+```
+_do_ and _end_ keywords can be replaced by curly braces {}.
+
+The __.times__ method is like a super compact for loop: it can perform a task on each item in an object a specified number of times.
+```ruby
+10.times do
+  print "Hello there!"
+end
+```
