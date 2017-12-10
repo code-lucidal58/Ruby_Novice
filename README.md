@@ -176,10 +176,6 @@ end
 ```
 This code snippet will print only even numbers from 18 to 0.
 
-Arrays in Ruby are declared as:
-```ruby
-my_array = [1,2,3,4,5]
-```
 __.each__ method is more powerful iterator.
 ```ruby
 array = [1,2,3,4,5]
@@ -195,4 +191,41 @@ The __.times__ method is like a super compact for loop: it can perform a task on
 10.times do
   print "Hello there!"
 end
+```
+
+## Data Structures
+Arrays in Ruby are declared as:
+```ruby
+my_array = [1,2,3,4,5]
+```
+
+2D array is declared as:
+```ruby
+my_2d_array = [[0,0],[0,0]]
+```
+
+Hashes in Ruby are sort of like JavaScript objects or Python dictionaries. A hash is a collection of key-value pairs. Values are assigned to keys using **=>**.
+```ruby
+my_hash = { "name" => "Eric",
+  "age" => 26,
+  "hungry?" => true
+}
+puts my_hash["name"]
+```
+This is literal notation.
+
+An empty hash is declared as:
+```ruby
+my_hash  = Hash.new
+my_hash["key"] = "value"
+```
+
+To traverse through a hash, _.each_ iterator is used
+```ruby
+family = { "Homer" => "dad",
+  "Marge" => "mom",
+  "Lisa" => "sister",
+  "Maggie" => "sister"
+}
+family.each { |x, y| puts "#{x}: #{y}" }
 ```
