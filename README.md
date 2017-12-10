@@ -60,6 +60,12 @@ words = text.split(" ")
 ```
 _text_ is a string and _words_ is an array. Space is delimiter here.
 
+_.to_s_ is used to convert other data-type variables into string
+```ruby
+num = 8
+puts "The number is "+num.to_s
+```
+
 ## Comments
 Single line comments are written with hash(#) in the start. Multi-line comments start with _=begin_ and end with _=end_ .
 ```ruby
@@ -227,5 +233,19 @@ family = { "Homer" => "dad",
   "Lisa" => "sister",
   "Maggie" => "sister"
 }
-family.each { |x, y| puts "#{x}: #{y}" }
+family.each { |x, y| puts "key: #{x}: value: #{y}" }
 ```
+Hash can have default values.
+```ruby
+h = Hash.new("nothing here")
+puts h # {}
+puts h["kitty"] # nothing here
+```
+
+_.sort_by_ function is used to sort elements in hash. It returns an array of array.
+```ruby
+frequencies = frequencies.sort_by do |key, value|
+  value
+end
+```
+The above code snippet sorts the hash _frequencies_ as per its value in ascending order by default.
