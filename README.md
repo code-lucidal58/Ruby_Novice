@@ -293,3 +293,72 @@ _.sort!_ accepts a block which can be used to sort array in descending order as 
 books.sort! { |firstBook, secondBook| firstBook <=> secondBook } #for ascending order
 books.sort! { |secondBook, firstBook| firstBook <=> secondBook } #for descending order
 ```
+
+## Hashes and Symbols
+In Hashes, if you are trying to access a key which do not exist, Ruby return __nil__. It is Ruby's way of saying nothing at all. __=>__ is called the **hash rocket** symbol.
+
+Hashes can also be defined using _symbols_:
+```ruby
+menagerie = { :foxes => 2,
+  :giraffe => 1,
+  :weezards => 17,
+  :elves => 1,
+  :canaries => 4,
+  :ham => 1
+}
+```
+**_Note_**: Hash lookup is faster with symbol keys than with string keys.
+
+Symbols are not strings. There can be different strings all having the same value, there's only one copy of any particular symbol at a given time. Symbols always start with a colon (:). They must be valid Ruby variable names. These are mainly used as hash keys or for referencing method names.
+```ruby
+"string == :string #false
+```
+
+The **.object_id** method gets the ID of an object. It's how Ruby knows whether two objects are the exact same object.
+```ruby
+puts "string".object_id
+puts :symbol.object_id
+```
+
+_.to_s_ and _.to_sym_ can be used for interconversion between strings and symbols.
+```ruby
+:hellothere.to_s
+# ==> "hellothere"
+
+"hellothere".to_sym
+# ==> :hellothere
+```
+__.inter__ works the same as _.to_sym_.
+
+In Ruby 1.9, the hash definition syntax changed.
+```ruby
+new_hash = { 
+  one: 1,
+  two: 2,
+  three: 3
+}
+```
+The keys are still symbols.
+
+__.select__ method can be used on hashes for filtering out data based on some condition.
+```ruby
+grades = { rita: 100,
+  mita: 97,
+  ayush: 56,
+  jane: 83
+}
+
+grades.select { |name, grade| grade <=  97 }
+# ==> { :rita => 100, :mita => 97 }
+```
+
+Every time in .each block for hashes we have to define variables for key as well value. Ruby has two methods __.each_key__ and __.each_value__ to overcome this problem.
+```ruby
+my_hash = { one: 1, two: 2, three: 3 }
+
+my_hash.each_key { |k| print k, " " }
+# ==> one two three
+
+my_hash.each_value { |v| print v, " " }
+# ==> 1 2 3
+```
