@@ -66,6 +66,11 @@ num = 8
 puts "The number is "+num.to_s
 ```
 
+_.to_a_ converts almost anything to an array.
+```ruby
+puts (1..10).to_a
+```
+
 ## Comments
 Single line comments are written with hash(#) in the start. Multi-line comments start with _=begin_ and end with _=end_ .
 ```ruby
@@ -249,3 +254,42 @@ frequencies = frequencies.sort_by do |key, value|
 end
 ```
 The above code snippet sorts the hash _frequencies_ as per its value in ascending order by default.
+
+## Sorting Methods and Blocks
+Methods are defined using the keyword _def_.
+```ruby
+def welcome
+  puts "Welcome to Ruby!"
+end
+```
+
+A method that takes parameters and returns the sum. _return_ keyword is used.
+```ruby
+def add(a,b)
+  return a+b
+end
+```
+
+Blocks can be defined with either the keywords _do_ and _end_ or with curly braces ({}).
+```ruby
+[1, 2, 3, 4, 5].each do |i| puts i*5 end
+```
+
+_.sort!_ method sorts array. Be default, ascending.
+```ruby
+my_array = [1,4,2,6,3]
+my_array.sort!
+```
+
+**Combined Comparison Operator:** ( <=> ) This returns 0 if first operand is equal to second, 1 if first operand is greater second else -1.
+```ruby
+name_1 = "Anna"
+name_2 = "Betti"
+puts name_1 <=> name_2
+```
+
+_.sort!_ accepts a block which can be used to sort array in descending order as well.
+```ruby
+books.sort! { |firstBook, secondBook| firstBook <=> secondBook } #for ascending order
+books.sort! { |secondBook, firstBook| firstBook <=> secondBook } #for descending order
+```
