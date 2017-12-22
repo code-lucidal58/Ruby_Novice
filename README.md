@@ -131,6 +131,18 @@ print 'Good work!!' unless jobNotDone
 Complex expressions can be created using these operators: E.g. *(x && (y || w)) && z*</br>
 Expressions in parentheses are always evaluated before anything outside parentheses.
 
+__case__ is an alternative to _if_ _else_ statements.
+```ruby
+case language
+  when "JS"
+    puts "Websites!"
+  when "Ruby"
+    puts "Web apps!"
+  else
+    puts "I don't know!"
+end
+```
+
 ## Loops and Iterators
 Use of while:
 ```ruby
