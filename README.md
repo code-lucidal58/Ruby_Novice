@@ -121,10 +121,16 @@ end
 ```
 
 There is another syntax of using _unless_ and _if_ which is similar to how we put conditions in our day-to-day conversations.
+__expression if boolean__
+__expression unless boolean__
 ```ruby
 jobNotDone = false
 print 'Good work!!' unless jobNotDone
 ```
+No need to write *end* in the end of the statement.
+
+Ruby also supports ternary operator:
+__boolean ? Do this if true: Do this if false__
 
 **Relational, Assigment and Comparison Operators** are same as for other common languages: = == > >= < <= != </br>
 **Logical and Boolean operators**: && || !</br>
@@ -140,6 +146,15 @@ case language
     puts "Web apps!"
   else
     puts "I don't know!"
+end
+```
+
+The above can also be like as below: ;P
+```ruby
+case language
+  when "JS" then puts "Websites!"
+  when "Ruby" then puts "Web apps!"
+  else puts "I don't know!"
 end
 ```
 
@@ -214,6 +229,12 @@ The __.times__ method is like a super compact for loop: it can perform a task on
 10.times do
   print "Hello there!"
 end
+```
+
+__.upto__ and __.downto__ can also be iterate through a start and end value. An inclusive range is formed.
+```ruby
+"L".upto("P") { |num| print num, " " }
+# Prints L M N O P
 ```
 
 ## Data Structures
@@ -374,3 +395,32 @@ my_hash.each_key { |k| print k, " " }
 my_hash.each_value { |v| print v, " " }
 # ==> 1 2 3
 ```
+
+Data can be deleted from hash using the method __.delete(key)__
+```ruby
+my_hash.delete(key)
+```
+
+## Refracting
+The **conditional assignment operator**: ||=. It assigns a value to a variable only when it is not already assigned.
+```ruby
+favorite_book = nil
+puts favorite_book #nil
+
+favorite_book ||= "Cat's Cradle"
+puts favorite_book #Cat's Cradle
+
+favorite_book ||= "Why's (Poignant) Guide to Ruby"
+puts favorite_book #Cat's Cradle
+
+favorite_book = "Why's (Poignant) Guide to Ruby"
+puts favorite_book #Why's (Poignant) Guide to Ruby
+```
+
+If there are no _return_ statement in a function and a value is expected from that function, then the method will return the result of the last evaluated expression.
+```ruby
+def add(a,b)
+  a + b
+end # this method will return the sum of two numbers
+```
+
