@@ -1,4 +1,4 @@
-# Ruby_Novice
+# Ruby Cheatsheet
 All you need to know to start about Ruby
  >Ruby is a general purpose language, commonly used in Rails applications.
  
