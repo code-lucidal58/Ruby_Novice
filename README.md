@@ -6,3 +6,6 @@ bad-reputation for slow processing but this is not the case with Ruby. It has mo
 closures, iterators, first class continuations. Everything is an expression and is evaluated immediately.
 It includes an iteractive REPL shell for interpreting. The centralized package managemement system call RubyGems. 
 It has large standar library with modules for Web programming, GUI programming, OpenSSL and JSON. 
+
+### Running Ruby programs
+open command prompt and run **irb**. This will launch the interative ruby shell.
