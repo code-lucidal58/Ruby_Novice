@@ -41,7 +41,7 @@ class Employee
   end
   
   #an instance method, called using the dot operator
-  def getPaid(hours)
+`  def getPaid(hours)
     return @pay*hours
   end
 end
