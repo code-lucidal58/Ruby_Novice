@@ -13,7 +13,7 @@ will read the statement, evaluate it, print the result, and then give the contro
 rather that braces for defining scopes. To exit the shell, type **quit()**. This will bring the control back to command prompt.
 The other way to execute ruby is by writing script in a file with .rb extension. To run this file, write in command prompt ```ruby hello.rb``` where hello.rb is the ruby script file.
 
-### Data Types and Varibales
+### Data Types and Variables
 Variables are dynamically typed in Ruby. Hence mentioning data type is not required while declaring a variable.
 ```ruby
 a = 100
@@ -44,3 +44,20 @@ $global #100
 changeit
 $global #0
 ```
+**nil** is an object. When nil is assigned to a variable, it does not mean that the variable is empty. It is storing the nil object of **NilClass*.
+```ruby
+x = nil
+x.nil? # true
+x.class #NilClass
+```
+
+### Input to program
+**gets** is used to take input from user. By default, it will save user's input in string format. To accept input in other format, explicit typecast is required.
+```ruby
+x = gets
+x.class #String
+y = Integer(gets)
+y.class #Integer
+```
+Similarly, other data types casting can also be done.  
+For printing to console, **print** or **puts** is used. The later adds a new line by default to the parameter, while the former does not.
