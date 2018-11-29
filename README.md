@@ -39,8 +39,8 @@ add dollar sign($) in the start of variable name.
 $global = 100
 def changeit
   $global = 0
- end
- $global #100
- changeit
- $global #0
+end
+$global #100
+changeit
+$global #0
 ```
