@@ -18,4 +18,7 @@ is the ruby script file.
 
 ## Cheatsheets
 **part_0_introduction**  
-**part_1_data_types_variables**: description on data types and creation of variables
+**part_1_data_types_variables**: description on data types and creation of variables  
+**part_2_string_operations**: string related operations, concatenations and interpolations
+
+The Ruby version I am working on is ```ruby 2.5.3p105 (2018-10-18 revision 65156) [x64-mingw32]```.

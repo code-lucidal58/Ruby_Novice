@@ -1,32 +1,29 @@
 ## Data Types and Variables
-Variables in Ruby are declared as:
-```ruby
-my_number = 25
-my_boolean = true
-my_string = "Hello"
-puts my_number
-```
 Variables are dynamically typed in Ruby. Hence mentioning data type is not required while declaring a variable.
 ```ruby
-a = 100
-a.class
+my_number = 25 # Integer
+my_float = 6.5 # Float
+my_boolean = true # Boolean
+my_string = "Hello" # String
+puts my_number
 ```
-Output of the obove code will be *FixNum*. ```.class``` will return the data type of the varibale. Integers in Ruby can be 
-*FixNum* or *BigNum*. ```a=67238764387648764794698``` is of BigNum type.
-Another data type is *Float* which stores decimal numbers.
-Another data type is *String*. It can be declared using single quotes(') or double quotes("). It can also be declared using the *String* constructor.
-```ruby
-b = String.new("goodbye")
-```
-Booleans are stored with different class names.
+```var_name.class``` returns the data type of the variable.
 ```ruby
 a = true
 a.class #TrueClass
 b = false
 b.class #FalseClass
+c = 100
+c.class # Integer
 ```
-All variables in Ruby should start with small letter. This indicates that they are local variables. To declare global variables,
-add dollar sign($) in the start of variable name.
+Strings can be declared using single quotes(') or double quotes("). It can also be declared using the *String* constructor.
+```ruby
+b = String.new("goodbye")
+```
+
+### Variable Conventions
+All variables in Ruby should start with small letter. This indicates that they are local variables. 
+To declare global variables, add dollar sign($) in the start of variable name.
 ```ruby
 $global = 100
 def changeit
@@ -42,6 +39,17 @@ x = nil
 x.nil? # true
 x.class #NilClass
 ```
+
+### Mathematical and Boolean Operations
+Ruby supports simple mathematical operations like: + - * / % **. The precedence sequence is as in mathematics. 
+```ruby
+a = 9/2 # 4
+b = 9/2.0 #4.5
+c = 9.0/2 #4.5
+puts 6+4/2 # 8
+```
+Comparision operators: i.e. <, >, <=, >=, ==, !=  
+Boolean operations: !(not), &&(and), ||(or)
 
 ### Input to program
 **gets** is used to take input from user. By default, it will save user's input in string format. To accept input in other format, explicit typecast is required.

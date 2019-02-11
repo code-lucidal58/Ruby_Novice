@@ -1,64 +1,10 @@
+
 ## Common Methods in Ruby
-_.length_ is called on a string or string variable. It returns the length if the string.
-```ruby
-puts "Your_Name".length
-```
-_.reverse_ is called on a string or string variable. It returns the string in reverse order. It does not modify the original string.
-```ruby
-puts string_variable.reverse
-```
-_.downcase_ and _.upcase_ is used to return string in all lowercase and all uppercase respectively.
-Multiple methods can be called in single line, one after the other.
-```ruby
-puts string_variable.upcase.reverse
-```
-_.capitalize_ capitalizes the first letter in the sentence and changes rest to lowercase.
-
-*__Note:__* If a method is ended with exclamation mark(!), it modifies the original value of the varibale with the result.
-```ruby
-user_input.downcase!
-```
-_.include? "substring"_ checks if the variable has the substring. It returns boolean.
-```ruby
-if input.include? "hello"
-    puts input
-end
-```
-*__Note__*: As a general rule, Ruby methods that end with ? evaluate to the boolean values true or false.
-
-_.gsub_ stands global substitution. It substitutes a substring with another. 
-```ruby
-user_input.gsub!(/s/,"th")
-```
-This replaces all 's' in the string to 'th'.
-
-_.split_ method returns all words in a string as an array. If text is given as parameter, it will divide the string wherever it sees that bit of text. The test is called _delimiter_.
-```ruby
-words = text.split(" ")
-```
-_text_ is a string and _words_ is an array. Space is delimiter here.
-
-_.to_s_ is used to convert other data-type variables into string
-```ruby
-num = 8
-puts "The number is "+num.to_s
-```
-
 _.to_a_ converts almost anything to an array.
 ```ruby
 puts (1..10).to_a
 ```
-
-## Comments
-Single line comments are written with hash(#) in the start. Multi-line comments start with _=begin_ and end with _=end_ .
-```ruby
-# This is a single line comment
-=begin 
-This is a
-multiple line comment
-=end
-```
-
+## Variables
 Local variables are written in all small letters separated by underscore. E.g. my_name, simon.
 To get input from user, _gets.chomp_ is used.
 ```ruby
@@ -66,13 +12,6 @@ input1 = get.chomp
 ``` 
 By default, Ruby adds a new line after input. _chomp_ removes that extra new line.
 
-## String Interpolation
-```ruby
-monkey = "Curious"
-print "I took #{monkey} to zoo"
-```
-Output will be: *I took Curious to zoo*
-Notice, use double apostrophe(") to print the interpolated statement.
 
 ## Control Flow
 _if_ and _elsif_ works in the same way as other languages.
